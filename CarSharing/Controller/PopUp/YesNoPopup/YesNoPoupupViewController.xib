@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FFAlama-Bold.otf">
+            <string>FFAlama-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YesNoPoupupViewController" customModule="CarSharing" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonsView" destination="7yq-54-elo" id="Und-hu-lYb"/>
+                <outlet property="holderView" destination="nVi-MZ-Cro" id="15s-GB-uap"/>
+                <outlet property="noButton" destination="QJE-o2-vBN" id="pZW-4q-T0b"/>
+                <outlet property="popupView" destination="nVi-MZ-Cro" id="GaG-Tm-pyI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yesButton" destination="7hP-Fi-mwD" id="RZZ-UI-TOT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nVi-MZ-Cro">
+                    <rect key="frame" x="62" y="298" width="290" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarDriving" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-mr-tBt">
+                            <rect key="frame" x="10" y="10" width="270" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="02u-yp-Zsb"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7yq-54-elo">
+                            <rect key="frame" x="20" y="238" width="250" height="42"/>
+                            <subviews>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJE-o2-vBN">
+                                    <rect key="frame" x="0.0" y="0.0" width="122.5" height="42"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" name="FFAlama-Bold" family="FF Alama" pointSize="14"/>
+                                    <state key="normal" title="No">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" name="black"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                            <size key="value" width="0.0" height="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="noAction:" destination="-1" eventType="touchUpInside" id="HAE-Ic-FIf"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hP-Fi-mwD">
+                                    <rect key="frame" x="127.5" y="0.0" width="122.5" height="42"/>
+                                    <color key="backgroundColor" name="cgBlue"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="42" id="xlr-z2-GSo"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="FFAlama-Bold" family="FF Alama" pointSize="14"/>
+                                    <state key="normal" title="Yes">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <state key="selected">
+                                        <color key="titleColor" name="black"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                            <real key="value" value="0.5"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                            <size key="value" width="0.0" height="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="yesAction:" destination="-1" eventType="touchUpInside" id="DqS-Sk-Fpn"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to confirm the trip?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-fX-rgh">
+                            <rect key="frame" x="23" y="157" width="244" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="PsZ-mr-tBt" firstAttribute="leading" secondItem="nVi-MZ-Cro" secondAttribute="leading" constant="10" id="0ei-TK-xOI"/>
+                        <constraint firstItem="dxf-fX-rgh" firstAttribute="centerX" secondItem="PsZ-mr-tBt" secondAttribute="centerX" id="8CU-9e-KPy"/>
+                        <constraint firstItem="dxf-fX-rgh" firstAttribute="top" secondItem="PsZ-mr-tBt" secondAttribute="bottom" constant="57" id="BPB-wm-Nxg"/>
+                        <constraint firstAttribute="bottom" secondItem="7yq-54-elo" secondAttribute="bottom" constant="20" id="DfV-Qv-AVb"/>
+                        <constraint firstItem="PsZ-mr-tBt" firstAttribute="top" secondItem="nVi-MZ-Cro" secondAttribute="top" constant="10" id="HAO-G6-0q3"/>
+                        <constraint firstItem="7yq-54-elo" firstAttribute="leading" secondItem="nVi-MZ-Cro" secondAttribute="leading" constant="20" id="OP3-pS-nFr"/>
+                        <constraint firstAttribute="height" constant="300" id="YI0-5k-7h2"/>
+                        <constraint firstAttribute="trailing" secondItem="7yq-54-elo" secondAttribute="trailing" constant="20" id="bcA-kk-BwJ"/>
+                        <constraint firstAttribute="trailing" secondItem="PsZ-mr-tBt" secondAttribute="trailing" constant="10" id="lrj-ij-ib2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.39935977442734905" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nVi-MZ-Cro" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Shu-Gf-o5q"/>
+                <constraint firstItem="nVi-MZ-Cro" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="eqg-KJ-3gd"/>
+                <constraint firstItem="nVi-MZ-Cro" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oV7-MZ-ItG"/>
+            </constraints>
+            <point key="canvasLocation" x="-30.434782608695656" y="92.410714285714278"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CarDriving" width="100" height="66.5"/>
+        <namedColor name="black">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="cgBlue">
+            <color red="0.18400000035762787" green="0.46299999952316284" blue="0.57999998331069946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
